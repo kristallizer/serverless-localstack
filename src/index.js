@@ -385,7 +385,7 @@ class LocalstackPlugin {
     const endpoints = plugin.gatheredData.info.endpoints || [];
     const edgePort = this.getEdgePort();
     endpoints.forEach((entry, idx) => {
-      // Strip trailing slash
+      // Strip trailing slash at the end of the hostname
       entry = entry.endsWith("/") ? entry.slice(0, -1) : entry;
 
       // endpoint format for old Serverless versions
